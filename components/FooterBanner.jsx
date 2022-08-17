@@ -12,7 +12,8 @@ function FooterBanner({footerBanner}) {
        <h3 className="font-extrabold text-7xl ml-6 capitalize ">{footerBanner.midText}</h3>
        <p className="m-4">{footerBanner.desc}</p>
 
-       <Link href={`/product/${footerBanner.product}`}>
+       {/* <Link href={`/product/${footerBanner.product}`}> */}
+       <Link href={`/product/herobanner`}>
          <button type="button" className=" rounded-2xl py-2 px-4 bg-white text-red-500 border-none mt-10 text-lg font-semibold cursor-pointer">{footerBanner.buttonText}</button>
 
        </Link>
