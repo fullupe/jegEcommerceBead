@@ -38,7 +38,7 @@ function Cart() {
 
   return (
     <div  ref={cartRef} className="w-screen  bg-opacity-50 fixed right-0 top-0 z-50 transition-all ease-in-out">
-      <div className=" h-screen w-[550px] bg-white float-right py-10 px-3 relative">
+      <div className=" h-screen w-[450px] md:w-[600px] bg-white float-right py-10 px-3 relative">
         <button type="button" onClick={()=>setShowCart(false)} className="flex items-center text-lg font-normal cursor-pointer gap-1 ml-6 border-none bg-transparent">
           <AiOutlineLeft/>
           <span className="ml-3">Your cart</span>
@@ -62,16 +62,16 @@ function Cart() {
             {cartItems.map((item, index)=>(
               <div key={item._id} className="w-44 h-44  rounded-2xl bg-[#ebebebe] my-2 flex  gap-4 p-5">
               
-              <img  className="rounded-2xl mx-4 items-center   bg-[#ebebeb] " src={urlFor(item?.image[0])}/>
+              <img  className="rounded-2xl mx-0 md:mx-4 items-center   bg-[#ebebeb] " src={urlFor(item?.image[0])}/>
 
               <div className=" flex flex-col justify-between w-80 text-[#324d67] mt-0 ">
-                <div className=" flex justify-between w-60 text-[#324d67]  gap-2 mx-2 ">
+                <div className=" flex justify-between w-30 md:w-60 text-[#324d67]  gap-2 mx-2 ">
 
-                  <h5 className="text-lg">{item.name}</h5>
-                  <h4 className="text-lg">Ghc{item.price}</h4>
+                  <h5 className="text-sx">{item.name}</h5>
+                  <h4 className="text-sx">Ghc{item.price}</h4>
 
                 </div>
-                <div className=" mt-8 w-48 flex justify-between space-x-20">
+                <div className=" mt-8 w-48 flex justify-between space-x-2 md:space-x-20">
                   <div>
                   <p className="border-2 border-gray-500 p-2 w-34 flex items-center ">
                      <span onClick={()=>toggleCartItemQuantity(item._id, "dec")} className="text-lg  py-2 px-2 cursor-pointer border-r-0  border-gray-000 text-[#f02d34]">
@@ -100,12 +100,12 @@ function Cart() {
             ))}
         </div>
         {cartItems.length >=1 && (
-          <div className=" absolute bottom-3 right-2 w-full py-8 px-32 items-center  flex flex-col  ">
-            <div className=" flex justify-between w-full border-b-2">
+          <div className=" absolute bottom-3 right-0 w-full py-8 px-20 items-center justify-center flex flex-col ">
+            <div className=" flex  justify-between  w-full border-b-2">
               <h3 className="text-xl">SubTotal:</h3>
               <h3 className="text-xl">Ghc {totalPrice}</h3>
             </div>
-            <div  className="w-full flex m-auto">
+            <div  className="w-full flex m-auto justify-center items-center ">
               <button type="button" onClick={handleCheckout} className="w-full max-w-400 py-3 px-4 rounded-2xl border-none text-xl mt-4 uppercase bg-[#f02d34] text-[#fff] cursor-pointer transition transform duration-75 scale-75 ease-in-out  ">
               Pay with Stripe
               </button>
