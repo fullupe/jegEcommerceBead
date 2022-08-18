@@ -24,12 +24,12 @@ function Success() {
     const [order, setOrder] = useState(null)
   return (
     <div className=" bg-[white] min-h-60 flex flex-col items-center justify-center">
-        <div className=" flex flex-col justify-center items-center w-1000 h-80 m-auto mt-40 bg-[#dcdcdc] p-14 rounded-2xl text-green-500 text-4xl">
+        <div className=" flex flex-col justify-center items-center w-full h-80 m-auto  mt-40 bg-[#dcdcdc] p-14 rounded-2xl text-green-500 text-4xl">
             <p className="text-green-500 text-4xl">
                 <BsBagCheckFill/>
 
             </p>
-            <h2>Thank You for Your Order</h2>
+            <h2 className="text-3xl">Thank You for Your Order</h2>
             <p className="text-lg font-semibold text-center">Check your email for the receipt.</p>
             <p className="text-center mt-4 text-lg">
                 If you have  any Questions, Please email
