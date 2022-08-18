@@ -33,7 +33,7 @@ function Success() {
             <p className="text-lg font-semibold text-center">Check your email for the receipt.</p>
             <p className="text-center mt-4 text-lg">
                 If you have  any Questions, Please email
-                <a href="mailto:order@example.com" className="ml-1 text-[#f02d34]">order@example.com</a>
+                <a href="mailto:order@example.com" className="ml-1 text-[#f02d34]">info@beadafrica.com</a>
             </p>
         </div>
         <Link href="/">
